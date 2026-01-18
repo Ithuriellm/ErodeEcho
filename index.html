@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>《流沙遗歌 ErodeEcho》世界观完整设定集</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    
+    <!-- 引入MathJax核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
         * {
@@ -62,6 +78,55 @@
             border-left: none;
             background: none;
         }
+        
+        .center-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .center-container p {
+            margin: 10px 0;
+        }
+        
+        .center-container ol {
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+
+        /* 通用样式 */
+        .center-container li {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        /* 根据父容器决定边框颜色 */
+        .essence-box .center-container li {
+            border-left: 4px solid #d84315; /* 红色引用框的红色边框 */
+        }
+
+        .model-box .center-container li {
+            border-left: 4px solid #2e7d32; /* 绿色引用框的绿色边框 */
+        }
+
+        /* 其他引用框可以按需添加 */
+        .formula-box .center-container li {
+            border-left: 4px solid #1565c0; /* 蓝色 */
+        }
+
+        .definition-box .center-container li {
+            border-left: 4px solid #6a1b9a; /* 紫色 */
+        }
+
+        .arrow {
+            margin: 10px 0;
+            font-size: 1.2em;
+    }
 
         .theme-quote p {
             margin: 12px 0;
@@ -447,7 +512,7 @@
                 </a>
                 <a href="#part3" class="toc-card">
                     <div class="toc-card-content">
-                        <div class="toc-card-title">后末日文明</div>
+                        <div class="toc-card-title">后启示录文明</div>
                         <div class="toc-card-subtitle">记忆科技·人类认知</div>
                     </div>
                 </a>
@@ -510,7 +575,7 @@
             <h3>2. 信息域基础定理</h3>
             <h4>定理 I：信息域与熵定义</h4>
             <ul>
-                <li>信息存在于有限的抽象空间"信息域"中。信息的等效体积V 与其信息熵值 H 的关系遵循 <code>V ∝ |ln(H)|</code>。信息域的总容量随物质空间的尺度而变化。</li>
+                <li>信息存在于有限的抽象空间"信息域"中。信息的等效体积V 与其信息熵值 H 的关系遵循 \( V \propto \left|\ln(H)\right| \)。信息域的总容量随物质空间的尺度而变化。</li>
             </ul>
             
             <h4>定理 II：普遍性定理</h4>
@@ -546,12 +611,12 @@
                 <h4>本质</h4>
                 <p><strong>宇宙基石弦（Universal Fundamental String）</strong></p>
                 <ul>
-                    <li>熵值：H 恒等于 1</li>
+                    <li>熵值：$H$ 恒等于 1</li>
                     <li>内容：宇宙基本物理法则与常数</li>
                     <li>特性：
                         <ul>
                             <li>物质信息域的永恒界限</li>
-                            <li>等效体积 V = 0</li>
+                            <li>等效体积 $V = 0$</li>
                             <li>不可摧毁</li>
                             <li>受最高极限保护</li>
                         </ul>
@@ -564,13 +629,13 @@
                 <h4>本质</h4>
                 <p><strong>文明遗歌弦（Civilization Echo String）</strong></p>
                 <ul>
-                    <li>熵值：H 无限趋近于 1</li>
+                    <li>熵值：$H$ 无限趋近于 1</li>
                     <li>内容：一个文明创造的终极信息结晶</li>
                     <li>特性：
                         <ul>
-                            <li>等效体积 V 趋近于 0</li>
+                            <li>等效体积 $V$ 趋近于 0</li>
                             <li>能长期抵抗流沙清理</li>
-                            <li>会因 H 值偏离 1 而发生"衰减"</li>
+                            <li>会因 $H$ 值偏离 1 而发生"衰减"</li>
                             <li>最终会"断弦"</li>
                         </ul>
                     </li>
@@ -736,14 +801,14 @@
             
             <h4>5.1 有序记忆区（约90%）</h4>
             <ul>
-                <li>存储内容：H<<1 的、正在演化的高有序度信息（发展中的文明成果）</li>
-                <li>状态：体积 V 巨大，是信息域的主要占用者</li>
+                <li>存储内容：$H \ll 1$ 的、正在演化的高有序度信息（发展中的文明成果）</li>
+                <li>状态：体积 $V$ 巨大，是信息域的主要占用者</li>
                 <li>特点：流沙机制的重要清理目标</li>
             </ul>
             
             <h4>5.2 无序记忆区（约7%）</h4>
             <ul>
-                <li><strong>存储内容</strong>：H＞1的无序信息</li>
+                <li><strong>存储内容</strong>：$H > 1$的无序信息</li>
                 <li><strong>状态</strong>：作为流沙清理过程的工作区和"垃圾留存区"</li>
                 <li><strong>功能</strong>：数据被清除后与格式化</li>
             </ul>
@@ -758,13 +823,13 @@
             <h4>5.4 系统固件区（约1%）</h4>
             <ul>
                 <li><strong>存储内容</strong>：信息域自身的运行规则，包括流沙的触发算法</li>
-                <li><strong>本质</strong>：H=1的信息弦集群</li>
+                <li><strong>本质</strong>：$H = 1$的信息弦集群</li>
                 <li><strong>状态</strong>：受到隔离级别保护，极端稳定</li>
                 <li><strong>特殊性质</strong>：其中某个只写区块在现实中投影为歌者（Echokeeper）</li>
             </ul>
             
-            <h3>6. 区域信息等效体积（λ）与动态上限（λm）</h3>
-            <h4>6.1 λ（Lambda）的定义</h4>
+            <h3>6. 区域信息等效体积（$λ$）与动态上限（$λ_m$）</h3>
+            <h4>6.1 $λ$（Lambda）的定义</h4>
             <div class="definition-box">
                 <h4>定义</h4>
                 <p>区域信息等效体积：某个信息聚类在信息域中的总占用"体积"。</p>
@@ -785,16 +850,16 @@
             
             <p><strong>计算：</strong></p>
             <ul>
-                <li>λ＝区域内所有信息的等效体积之和</li>
-                <li>根据定理：<code>λ ∝ |ln(H)|</code></li>
+                <li>$λ$＝区域内所有信息的等效体积之和</li>
+                <li>根据定理：\( \lambda \propto \left|\ln(H)\right| \)</li>
             </ul>
             
-            <h4>6.2 λ的增长因素</h4>
-            <p><strong>文明发展 = λ 增长：</strong></p>
+            <h4>6.2 $λ$的增长因素</h4>
+            <p><strong>文明发展 = $λ$ 增长：</strong></p>
             <ol>
                 <li>创造有序信息
                     <ul>
-                        <li>科技突破（H 降低 → V 增大）</li>
+                        <li>科技突破（$H$ 降低 → $V$ 增大）</li>
                         <li>艺术创作（新的低熵结构）</li>
                         <li>历史积累（记忆库扩张）</li>
                         <li>人口增长（更多信息载体）</li>
@@ -815,42 +880,42 @@
                 </li>
             </ol>
             
-            <p><strong>自然现象也会影响 λ：</strong></p>
+            <p><strong>自然现象也会影响 $λ$：</strong></p>
             <ul>
                 <li>恒星形成（物质有序化）</li>
                 <li>生命诞生（极低熵结构）</li>
                 <li>复杂天体结构（黑洞、中子星）</li>
             </ul>
             
-            <h4>6.3 λm（动态上限）</h4>
+            <h4>6.3 $λ_m$（动态上限）</h4>
             <div class="definition-box">
                 <h4>定义</h4>
                 <p>区域信息等效体积的动态上限。</p>
             </div>
             
-            <p><strong>为什么是"动态"？</strong>λm 不是固定值，取决于：</p>
+            <p><strong>为什么是"动态"？</strong>$λ_m$ 不是固定值，取决于：</p>
             <ol>
                 <li>信息域的局部容量
                     <ul>
                         <li>与物质空间的尺度相关</li>
-                        <li>星系尺度的 λm ＞ 行星尺度的 λm</li>
+                        <li> 星系尺度的 $λ_m$ > 行星尺度的 $λ_m$ </li>
                     </ul>
                 </li>
-                <li>周围区域的λ分布
+                <li>周围区域的$λ$分布
                     <ul>
-                        <li>邻近区域的λ很低 → 本区域的 λm 可以更高</li>
+                        <li>邻近区域的$λ$很低 → 本区域的 $λ_m$ 可以更高</li>
                     </ul>
                 </li>
                 <li>信息域的"拥堵程度"
                     <ul>
                         <li>全宇宙的总信息量有上限</li>
-                        <li>当接近全局上限时，λm 会整体下降</li>
+                        <li>当接近全局上限时，$λ_m$ 会整体下降</li>
                     </ul>
                 </li>
                 <li>历史性
                     <ul>
-                        <li>长期稳定的区域，λm 可能更高</li>
-                        <li>快速膨胀的区域，λm 会被提前限制</li>
+                        <li>长期稳定的区域，$λ_m$ 可能更高</li>
+                        <li>快速膨胀的区域，$λ_m$ 会被提前限制</li>
                     </ul>
                 </li>
             </ol>
@@ -869,21 +934,21 @@
             <p><strong>核心逻辑:</strong></p>
             <ul>
                 <li>流沙是定理IV（熵增趋势）的宏观体现</li>
-                <li>优先寻找并覆盖信息域中等效体积 V 最大的信息</li>
-                <li>毁灭性主要施加于 H << 1 的活跃文明（有序记忆区）</li>
-                <li>几乎不触及 H = 1 的信息弦和 H > 1 的无序信息</li>
+                <li>优先寻找并覆盖信息域中等效体积 $V$ 最大的信息</li>
+                <li>毁灭性主要施加于 $H \ll 1$ 的活跃文明（有序记忆区）</li>
+                <li>几乎不触及 $H = 1$ 的信息弦和 $H > 1$ 的无序信息</li>
             </ul>
             
             <h4>7.2 触发机制</h4>
             <p><strong>综合判断系统</strong> （非简单阈值触发）：</p>
             
-            <p><strong>判断维度1：λ 的绝对值</strong></p>
+            <p><strong>判断维度1：$λ$ 的绝对值</strong></p>
             <ul>
-                <li>λ 是否接近/超过 λm？</li>
+                <li>$λ$ 是否接近/超过 $λ_m$？</li>
                 <li>超过多少？（超限越多，触发概率越高）</li>
             </ul>
             
-            <p><strong>判断维度2：λ 的增长速率 dλ/dt</strong></p>
+            <p><strong>判断维度2：$\lambda$ 的增长率：$\frac{d\lambda}{dt}$</strong></p>
             <ul>
                 <li>缓慢增长 vs 急剧爆发</li>
                 <li>急剧爆发更危险（系统无法适应）</li>
@@ -898,8 +963,8 @@
             <p><strong>判断维度3：信息的结构稳定性</strong></p>
             <ul>
                 <li>区域内的信息是否健康？</li>
-                <li>高密度存储模式（H 低但不波动）→ 相对安全</li>
-                <li>混乱且波动（H 忽高忽低）→ 危险信号</li>
+                <li>高密度存储模式（$H$ 低但不波动）→ 相对安全</li>
+                <li>混乱且波动（$H$ 忽高忽低）→ 危险信号</li>
             </ul>
             
             <p><strong>判断维度4：全局压力</strong></p>
@@ -924,38 +989,38 @@
             
             <div class="formula-box">
                 <h4>触发概率模型</h4>
-                <p>P(流沙触发) = f(λ/λm, dλ/dt，稳定性，全局压力，历史，遗歌弦)</p>
+                <p>$P(\text{流沙触发}) = f\left(\frac{\lambda}{\lambda_m}, \frac{d\lambda}{dt}, \text{稳定性}, \text{全局压力}, \text{历史}, \text{遗歌弦}\right)$</p>
                 <p>其中：</p>
                 <ul>
-                    <li>λ/λm > 1 - 概率急剧上升</li>
+                    <li>$\lambda/\lambda_m > 1$ - 概率急剧上升</li>
                     <li>遗歌弦存在：概率接近 100%（但有延迟）</li>
-                    <li>其他因素可能在 λ < λm 时也触发流沙</li>
+                    <li>其他因素可能在 $λ < λ_m$ 时也触发流沙</li>
                 </ul>
             </div>
             
             <h4>7.3 不同触发情境</h4>
             <p><strong>情境A：遗歌弦触发（高概率）</strong></p>
             <ul>
-                <li>文明发展到巅峰，λ 接近 λm</li>
+                <li>文明发展到巅峰，$λ$ 接近 $λ_m$</li>
                 <li>文明进入末期，遗歌弦开始爆发</li>
                 <li>遗歌弦干扰系统并产生异象</li>
-                <li>流沙几乎立即触发（延迟：数小时到数天）</li>
+                <li>流沙几乎立即触发（延迟：数月到数年）</li>
                 <li>特点：强度大、源点明确、加速度快</li>
             </ul>
             
             <p><strong>情境B：技术爆炸触发（中等概率）</strong></p>
             <ul>
                 <li>文明突然技术突破（AI、超光速、维度穿越等）</li>
-                <li>短时间内创造大量低熵值信息，dλ/dt 急剧上升</li>
-                <li>虽然 λ < λm，但增长速率过高</li>
+                <li>短时间内创造大量低熵值信息，$\frac{d\lambda}{dt}$ 急剧上升</li>
+                <li>虽然 $λ < λ_m$，但增长速率过高</li>
                 <li>特点：强度中等，可能突然到来</li>
             </ul>
             
             <p><strong>情境C：信息拥堵触发（低概率）</strong></p>
             <ul>
                 <li>全宇宙的信息总量接近极限</li>
-                <li>信息域整体拥堵，所有区域的 λm 被压缩</li>
-                <li>即使普通文明也可能超过新的 λm</li>
+                <li>信息域整体拥堵，所有区域的 $λ_m$ 被压缩</li>
+                <li>即使普通文明也可能超过新的 $λ_m$</li>
                 <li>流沙在多个区域间被激发</li>
                 <li>特点：宇宙级别的"信息清理"</li>
             </ul>
@@ -963,7 +1028,7 @@
             <p><strong>情境D：跨区域干涉触发（特殊情况）</strong></p>
             <ul>
                 <li>两个文明的信息域重叠/融合</li>
-                <li>局部λ急剧上升（1+1>2）</li>
+                <li>局部$λ$急剧上升（1+1>2）</li>
                 <li>触发流沙，两个文明同时被清理</li>
                 <li>特点：双重源点、覆盖范围异常大</li>
             </ul>
@@ -972,7 +1037,7 @@
             <ul>
                 <li>某个天体/天文现象（超新星、黑洞合并）</li>
                 <li>产生大量瞬时低熵值信息</li>
-                <li>λ短暂爆发</li>
+                <li>$λ$短暂爆发</li>
                 <li>特点：没有文明参与，纯粹的自然现象</li>
             </ul>
             
@@ -997,7 +1062,7 @@
                 <li>这个点成为信息域与物质世界的"薄弱处"</li>
                 <li>为什么流沙在这里爆发？
                     <ul>
-                        <li>遗歌弦（H≈1）在信息域中制造巨大"势能差"</li>
+                        <li>遗歌弦（$H ≈ 1$）在信息域中制造巨大"势能差"</li>
                         <li>流沙沿着这个势能差"倒灌"进物质世界</li>
                         <li>共振点是"决堤口"</li>
                     </ul>
@@ -1094,17 +1159,17 @@
             
             <div class="formula-box">
                 <h4>数学模型（参考）</h4>
-                <p>v(t) = v_0 × e^(αt)</p>
+                <p>\( v_t = v_0 \cdot e^{\alpha t} \)</p>
                 <p>其中：</p>
                 <ul>
-                    <li>v(t) = t时刻的扩散速度</li>
-                    <li>v_0 = 初始速度</li>
-                    <li>α = 加速系数（取决于文明的信息总量）</li>
-                    <li>t = 时间</li>
+                    <li>$v(t)$ = t时刻的扩散速度</li>
+                    <li>$v_0$ = 初始速度</li>
+                    <li>$\alpha$ = 加速系数（取决于文明的信息总量）</li>
+                    <li>$t$ = 时间</li>
                 </ul>
                 <p><strong>推论：</strong></p>
                 <ul>
-                    <li>信息量越大的文明，α越大</li>
+                    <li>信息量越大的文明，$α$越大</li>
                     <li>加速度越快，从发现到毁灭的窗口越短</li>
                 </ul>
             </div>
@@ -1570,28 +1635,28 @@
                 <h4>定义</h4>
                 <p><strong>原公式的问题：</strong></p>
                 <ul>
-                    <li>原设定：V ∝ |ln(H)|</li>
-                    <li>问题1：当 H → ∞ 时，ln(H) → ∞，导致 V → ∞（矛盾）</li>
-                    <li>问题2：当 H → 0 时，ln(H) → -∞，导致 V → ∞（合理，但数学上不优雅）</li>
+                    <li>原设定：\( V \propto \left|\ln(H)\right| \)</li>
+                    <li>问题1：当 $H \to \infty$ 时，$\ln(H) \to \infty$，导致 $V \to \infty$（矛盾）</li>
+                    <li>问题2：当 $H \to 0$ 时，$\ln(H) \to -\infty$，$|\ln(H)| \to \infty$，导致 $V \to \infty$（合理，但数学上不优雅）</li>
                     <li>问题3：H = 1 处没有特殊意义（应该是有序/无序的分界点）</li>
                 </ul>
             </div>
             
             <div class="formula-box">
                 <h4>修正公式</h4>
-                <p><strong>新公式：</strong><code>V = V₀ · |ln(H)| / H^α</code></p>
+                <p><strong>新公式：</strong>$V = V_0 \cdot \frac{|\ln(H)|}{H^\alpha}$</p>
                 <p><strong>其中：</strong></p>
                 <ul>
-                    <li>V₀：归一化常数</li>
-                    <li>H：信息熵值</li>
-                    <li>α：衰减指数（α ≈ 1.5 ~ 2）</li>
+                    <li>$V_0$：归一化常数</li>
+                    <li>$H$：信息熵值</li>
+                    <li>$\alpha$：衰减指数（$\alpha \approx 1.5$ 到 $2$）</li>
                 </ul>
                 <p><strong>公式特性：</strong></p>
                 <ol>
-                    <li><strong>当 H << 1（有序信息）时：</strong> ln(H) → 大的负值，|ln(H)| → 大，H^α → 很小，V → 很大 ✓</li>
-                    <li><strong>当 H ≈ 1（临界点）时：</strong> ln(H) ≈ 0，|ln(H)| ≈ 0，V ≈ 0，这是有序/无序的自然分界线 ✓</li>
-                    <li><strong>当 1 < H < 10（轻度无序）时：</strong> ln(H) 为小的正值，H^α 增长较慢，V 为中等值（无序记忆区的主要内容）✓</li>
-                    <li><strong>当 H > 10（重度无序到背景辐射）时：</strong> ln(H) 增长缓慢（对数特性），H^α 增长快速（幂函数特性），V → 0（分母占主导）✓</li>
+                    <li><strong>当 $H \ll 1$（有序信息）时：</strong> $\ln(H) \to$ 大的负值，$|\ln(H)| \to$ 大，$H^\alpha \to$ 很小，$V \to$ 很大 ✓</li>
+                    <li><strong>当 $H \approx 1$（临界点）时：</strong> $\ln(H) \approx 0$，$|\ln(H)| \approx 0$，$V \approx 0$，这是有序/无序的自然分界线 ✓</li>
+                    <li><strong>当 $1 < H < 10$（轻度无序）时：</strong> $\ln(H)$ 为小的正值，$H^\alpha$ 增长较慢，$V$ 为中等值（无序记忆区的主要内容）✓</li>
+                    <li><strong>当 $H > 10$（重度无序到背景辐射）时：</strong> $\ln(H)$ 增长缓慢（对数特性），$H^\alpha$ 增长快速（幂函数特性），$V \to 0$（分母占主导）✓</li>
                 </ol>
             </div>
             
@@ -1627,15 +1692,15 @@
                 <h4>定义</h4>
                 <p><strong>临界熵值（Critical Entropy Threshold）H_c：</strong>当信息的熵值 H 超过临界阈值 H_c 时，该信息结构虽在理论上存在，但在信息域的实际环境中会因过于脆弱和复杂而无法维持稳定状态。</p>
                 <ul>
-                    <li>H_c ≈ 10 ~ 15（具体数值取决于信息域的局部环境）</li>
-                    <li>当 H > H_c 时，信息进入"退化区间"</li>
+                    <li>$H_c \approx 10 \ \text{到} \ 15$（具体数值取决于信息域的局部环境）</li>
+                    <li>当 $H > H_c$ 时，信息进入"退化区间"</li>
                     <li>物理类比：类似于临界温度以上，物质无法维持固态结构</li>
                 </ul>
             </div>
             
             <div class="essence-box">
                 <h4>信息退化四阶段</h4>
-                <p><strong>阶段一：轻度无序（H = 1 ~ 5）</strong></p>
+                <p><strong>阶段一：轻度无序（$H$ = 1 ~ 5）</strong></p>
                 <ul>
                     <li>信息刚被流沙清除</li>
                     <li>仍保留部分结构和可读性</li>
@@ -1644,7 +1709,7 @@
                     <li>时砂共振器可以提取到较清晰的Fragment</li>
                 </ul>
                 
-                <p><strong>阶段二：重度无序（H = 5 ~ 10）</strong></p>
+                <p><strong>阶段二：重度无序（$H$ = 5 ~ 10）</strong></p>
                 <ul>
                     <li>信息结构严重退化</li>
                     <li>连贯性大部分丧失</li>
@@ -1653,16 +1718,16 @@
                     <li>时砂共振器只能提取到模糊的印象</li>
                 </ul>
                 
-                <p><strong>阶段三：临界退化（H = 10 ~ 15）</strong></p>
+                <p><strong>阶段三：临界退化（$H$ = 10 ~ 15）</strong></p>
                 <ul>
-                    <li>跨越临界熵值 H_c</li>
+                    <li>跨越临界熵值 $H_c$</li>
                     <li>信息结构急剧崩解</li>
                     <li>失去任何有意义的组织</li>
                     <li>像是"比特乱码"：完全无法解读</li>
                     <li>时砂共振器只能感知到噪音</li>
                 </ul>
                 
-                <p><strong>阶段四：退化为背景辐射（H > 15）</strong></p>
+                <p><strong>阶段四：退化为背景辐射（$H$ > 15）</strong></p>
                 <ul>
                     <li>信息完全失去结构</li>
                     <li>转化为信息域的<strong>背景辐射（Background Radiation）</strong></li>
@@ -1675,17 +1740,17 @@
             <h4>11.3 背景辐射的性质</h4>
             <div class="definition-box">
                 <h4>定义</h4>
-                <p><strong>信息域背景辐射：</strong>信息熵值极高（H → ∞）的信息残留，均匀分布在信息域中，不携带任何有意义的信息内容。</p>
+                <p><strong>信息域背景辐射：</strong>信息熵值极高（$H \rightarrow \infty$）的信息残留，均匀分布在信息域中，不携带任何有意义的信息内容。</p>
             </div>
             
             <p><strong>关键特性：</strong></p>
             
             <p><strong>1. 趋近于零的等效体积</strong></p>
             <ul>
-                <li>根据修正公式 V = V₀ · |ln(H)| / H^α</li>
-                <li>当 H > 15 时，虽然 ln(H) 仍在增长</li>
-                <li>但 H^α 增长更快（幂律 vs 对数）</li>
-                <li>V 快速趋近于 0</li>
+                <li>根据修正公式 $V = V_0 \cdot \frac{|\ln(H)|}{H^\alpha}$</li>
+                <li>当 $H > 15$ 时，虽然 $\ln(H)$ 仍在增长</li>
+                <li>但 $H^\alpha$ 增长更快（幂律 vs 对数）</li>
+                <li>$V$ 快速趋近于 $0$</li>
                 <li><strong>实际上不占用信息域的可用容量</strong></li>
             </ul>
             
@@ -1726,33 +1791,37 @@
             
             <h4>11.5 无序记忆区的动态平衡</h4>
             <div class="model-box">
+            <div class="center-container">
                 <h4>无序信息的生命周期</h4>
-                <p>有序信息（H << 1）</p>
-                <p>↓ [被流沙清除]</p>
-                <p>轻度无序（H ≈ 1 ~ 5）→ 无序记忆区存储（可读取Fragment）</p>
-                <p>↓ [继续退化，数十年到数百年]</p>
-                <p>重度无序（H ≈ 5 ~ 10）→ 信息碎片化（难以读取）</p>
-                <p>↓ [继续退化，数百年到数千年]</p>
-                <p>临界退化（H ≈ 10 ~ 15）→ 结构崩解（完全不可读）</p>
-                <p>↓ [跨越临界阈值]</p>
-                <p>背景辐射（H > 15）→ 不占用容量</p>
-                <p>↓ [长时间尺度消散，数千年到数万年]</p>
-                <p>完全消失</p>
+                <ol>
+                    <li>有序信息（$H \ll 1$）</li>
+                    <div class="arrow">↓ [被流沙清除]</div>
+                    <li>轻度无序（$H \approx 1 \sim 5$）→ 无序记忆区存储（可读取Fragment）</li>
+                    <div class="arrow">↓ [继续退化，数十年到数百年]</div>
+                    <li>重度无序（$H \approx 5 \sim 10$）→ 信息碎片化（难以读取）</li>
+                    <div class="arrow">↓ [继续退化，数百年到数千年]</div>
+                    <li>临界退化（$H \approx 10 \sim 15$）→ 结构崩解（完全不可读）</li>
+                    <div class="arrow">↓ [跨越临界阈值]</div>
+                    <li>背景辐射（$H > 15$）→ 不占用容量</li>
+                    <div class="arrow">↓ [长时间尺度消散，数千年到数万年]</div>
+                    <li>完全消失</li>
+                </ol>
             </div>
+        </div>
             
             <div class="model-box">
                 <h4>平衡状态</h4>
                 <p><strong>正常情况下：</strong></p>
                 <ul>
-                    <li>无序记忆区占用：~7%</li>
+                    <li>无序记忆区占用：$\sim 7\%$</li>
                     <li>其中：
                         <ul>
-                            <li>轻度无序信息（H = 1 ~ 5）：~3%（主要工作区）</li>
-                            <li>重度无序信息（H = 5 ~ 10）：~3%</li>
-                            <li>临界退化信息（H = 10 ~ 15）：~1%</li>
+                            <li>轻度无序信息（$H = 1 \sim 5$）：$\sim 3\%$（主要工作区）</li>
+                            <li>重度无序信息（$H = 5 \sim 10$）：$\sim 3\%$</li>
+                            <li>临界退化信息（$H = 10 \sim 15$）：$\sim 1\%$</li>
                         </ul>
                     </li>
-                    <li>背景辐射（H > 15）：不计入占用（V ≈ 0）</li>
+                    <li>背景辐射（$H > 15$）：不计入占用（$V \approx 0$）</li>
                 </ul>
                 <p><strong>异常情况：</strong>大规模流沙爆发后，短期内产生大量无序信息，无序记忆区占用可能飙升至 12% ~ 20%，随后逐渐恢复平衡。</p>
             </div>
@@ -1786,10 +1855,10 @@
             
             <div class="formula-box">
                 <h4>数学模型（参考）</h4>
-                <p><strong>退化速率方程：</strong>dH/dt = k(H - H_c)²</p>
-                <p>其中：H为信息熵值，H_c为临界熵值，k为退化系数（取决于信息域环境）。当 H > H_c 时，退化加速。</p>
-                <p><strong>背景辐射消散方程：</strong>ρ(t) = ρ₀ · e^(-t/τ)</p>
-                <p>其中：ρ(t)为t时刻的背景辐射密度，ρ₀为初始密度，τ为消散时间常数（10⁴ ~ 10⁶ 年）。</p>
+                <p><strong>退化速率方程：</strong>$\frac{dH}{dt} = k(H - H_c)^2$</p>
+                <p>其中：$H$为信息熵值，$H_c$为临界熵值，$k$为退化系数（取决于信息域环境）。当 $H > H_c$ 时，退化加速。</p>
+                <p><strong>背景辐射消散方程：</strong>$\rho_t = \rho_0 \cdot e^{-t/\tau}$</p>
+                <p>其中：$\rho(t)$为$t$时刻的背景辐射密度，$\rho_0$为初始密度，$\tau$为消散时间常数（$10^4 \sim 10^6$ 年）。</p>
             </div>
             
             <div class="essence-box">
@@ -1806,7 +1875,7 @@
         </div>
         
         <div class="section" id="part3">
-            <h2>第三部分：后末日时代人类文明</h2>
+            <h2>第三部分：后启示录时代人类文明</h2>
             
             <h3>12. 侵蚀（The Erosion）</h3>
             <h4>12.1 事件概述</h4>
@@ -1815,7 +1884,7 @@
                 <p><strong>定义：</strong>目前为止，全世界强度最大，也是第一次「流沙」灾难，这次灾难摧毁了将近整个世界的黄金时代人类文明。</p>
                 <p><strong>重要性：</strong></p>
                 <ul>
-                    <li>以此次灾难作为「遗忘率θ」的基准"θ=1"</li>
+                    <li>以此次灾难作为「遗忘率$θ$」的基准"$θ$ = 1"</li>
                     <li>以此作为前文明纪元和现文明纪元的分界线</li>
                 </ul>
             </div>
@@ -1828,17 +1897,17 @@
                     <ul>
                         <li>遗歌弦爆发（人类集体潜意识完成了某个终极创造）</li>
                         <li>技术奇点（AI突破、维度穿越、星际殖民）</li>
-                        <li>全球统一（全人类的信息域彻底融合，λ叠加）</li>
+                        <li>全球统一（全人类的信息域彻底融合，$λ$叠加）</li>
                     </ul>
                 </li>
                 <li>流沙从多个源点同时爆发（全球性）</li>
-                <li>遗忘率θ=1：流沙达到终末冲击阶段</li>
+                <li>遗忘率$θ$ = 1：流沙达到终末冲击阶段</li>
                 <li>文明几乎完全抹除</li>
             </ul>
             
             <p><strong>幸存者因素：</strong></p>
             <ul>
-                <li>地理隔离（某些区域的λ低，未被完全覆盖）</li>
+                <li>地理隔离（某些区域的$λ$低，未被完全覆盖）</li>
                 <li>偶然保护（处于流沙波前边缘）</li>
                 <li>技术残留（某种抗遗忘技术）</li>
                 <li>遗歌弦保存（形成局部记忆岛）</li>
@@ -1881,7 +1950,7 @@
                 </li>
             </ul>
             
-            <h3>13. 后末日人类的认知体系</h3>
+            <h3>13. 后启示录人类的认知体系</h3>
             <h4>13.1 流沙（人类视角）</h4>
             <div class="definition-box">
                 <h4>定义</h4>
@@ -1892,20 +1961,20 @@
                 </ul>
                 <p><strong>已知情报B：侵蚀基准</strong></p>
                 <ul>
-                    <li>侵蚀（The Erosion）是θ=1的标准事件</li>
+                    <li>侵蚀（The Erosion）是$θ$=1的标准事件</li>
                     <li>这是前文明纪元和现文明纪元的分界线</li>
                 </ul>
                 <p><strong>已知情报C：主要危害（按影响从低到高）</strong></p>
                 <ul>
-                    <li>θ∈[0.01~0.15]：记忆混乱/残缺/增加不属于自己的记忆；性格突变</li>
-                    <li>θ∈[0.15~0.60]："存在"的"实体"，被抹除或"流沙化"</li>
-                    <li>θ∈[0.60~1]：区域文明毁灭</li>
+                    <li>$\theta \in [0.01 \sim 0.15]$：记忆混乱/残缺/增加不属于自己的记忆；性格突变</li>
+                    <li>$\theta \in [0.15 \sim 0.60]$："存在"的"实体"，被抹除或"流沙化"</li>
+                    <li>$\theta \in [0.60 \sim 1]$：区域文明毁灭</li>
                 </ul>
                 <p><strong>已知情报D：主要表现</strong></p>
                 <ul>
-                    <li>θ地区内暴力犯罪激增</li>
-                    <li>θ气候反常，出现极端炎热/寒冷/干旱/洪涝</li>
-                    <li>θ异象暴发</li>
+                    <li>地区内暴力犯罪激增</li>
+                    <li>气候反常，出现极端炎热/寒冷/干旱/洪涝</li>
+                    <li>异象暴发</li>
                 </ul>
                 <p><strong>已知情报E：无明确标志</strong></p>
                 <ul>
@@ -1922,18 +1991,18 @@
                 <ul>
                     <li>指数越高，文明越发达</li>
                     <li>CI与流沙强度、频率、持续时间呈正相关</li>
-                    <li>但人类不理解真正的λ机制，可能测量有偏差</li>
+                    <li>但人类不理解真正的$λ$机制，可能测量有偏差</li>
                 </ul>
             </div>
             
             <div class="definition-box">
                 <h4>定义</h4>
-                <p><strong>遗忘率（θ - Theta）</strong></p>
+                <p><strong>遗忘率（$θ$ - Theta）</strong></p>
                 <p><strong>定义：</strong>在流沙爆发后，评估流沙强度及影响程度的量。</p>
-                <p><strong>数值范围：</strong> θ∈[0,1]</p>
+                <p><strong>数值范围：</strong> $\theta \in [0, 1]$</p>
                 <ul>
-                    <li>θ=0：无影响</li>
-                    <li>θ=1：侵蚀级别（最强）</li>
+                    <li>$\theta = 0$：无影响</li>
+                    <li>$\theta = 1$：侵蚀级别（最强）</li>
                 </ul>
                 <p><strong>用途：</strong></p>
                 <ul>
@@ -1977,28 +2046,28 @@
                         <li>不知道这会加速灭亡</li>
                     </ul>
                 </li>
-                <li><strong>θ=1不是极限</strong>
+                <li><strong>$θ$ = 1不是极限</strong>
                     <ul>
                         <li>侵蚀只是人类经历过的最强</li>
-                        <li>理论上θ可以更高（全宇宙规模的流沙）</li>
+                        <li>理论上$θ$可以更高（全宇宙规模的流沙）</li>
                     </ul>
                 </li>
-                <li><strong>文明指数Ec的本质</strong>
+                <li><strong>文明指数CI的本质</strong>
                     <ul>
                         <li>人类测量的是"表面繁荣"</li>
                         <li>真正危险的是"信息有序度"</li>
                         <li>可能一个"不繁荣"但"高度有序"的文明更危险</li>
                     </ul>
                 </li>
-                <li><strong>λ机制完全未知</strong>
+                <li><strong>$λ$机制完全未知</strong>
                     <ul>
-                        <li>人类不知道λ和λm的存在</li>
+                        <li>人类不知道$λ$和$λ_m$的存在</li>
                         <li>只能通过表面现象推测</li>
                     </ul>
                 </li>
             </ol>
             
-            <h3>14. 记忆科技（后末日时代的主要科学成果）</h3>
+            <h3>14. 记忆科技（后启示录时代的主要科学成果）</h3>
             <h4>14.1 基础：时砂工程学</h4>
             <div class="essence-box">
                 <h4>本质</h4>
@@ -2081,7 +2150,7 @@
             <p><strong>记忆晶体特性：</strong></p>
             <ul>
                 <li>可存储特定记忆/知识</li>
-                <li>抗遗忘能力：可抵御θ=0.4的流沙</li>
+                <li>抗遗忘能力：可抵御$θ$ = 0.4的流沙</li>
                 <li>制造难度：需要大量深灰时砂，成功率低（~10%），极其昂贵</li>
             </ul>
             
@@ -2108,7 +2177,7 @@
             
             <p><strong>效果：</strong></p>
             <ul>
-                <li>抗遗忘能力：可抵御θ=0.2的流沙</li>
+                <li>抗遗忘能力：可抵御$θ$ = 0.2的流沙</li>
                 <li>副作用：
                     <ul>
                         <li>该记忆变得"僵化"（无法更新）</li>
@@ -2149,7 +2218,7 @@
             
             <p><strong>效果：</strong></p>
             <ul>
-                <li>可抵御θ=0.3的流沙</li>
+                <li>可抵御$θ$ = 0.3的流沙</li>
                 <li>对高强度流沙无效</li>
                 <li>但至少提供预警时间</li>
             </ul>
@@ -2168,7 +2237,7 @@
             
             <p><strong>效果：</strong></p>
             <ul>
-                <li>抗遗忘能力：θ=0.15</li>
+                <li>抗遗忘能力：$θ$ = 0.15</li>
                 <li>便携，但保护范围小</li>
             </ul>
             
@@ -2212,7 +2281,7 @@
             <ul>
                 <li>24小时监测多项指标</li>
                 <li>发现异常立即警报</li>
-                <li>提供6-48小时预警时间（取决于θ）</li>
+                <li>提供6-48小时预警时间（取决于$θ$）</li>
             </ul>
             
             <p><strong>个人级：记忆手环</strong></p>
@@ -2279,7 +2348,7 @@
             
             <p><strong>技术的局限性：</strong></p>
             <ul>
-                <li>无法测量λ：只能测量表面现象</li>
+                <li>无法测量$λ$：只能测量表面现象</li>
                 <li>无法阻止流沙：所有技术只是"延缓"</li>
                 <li>无法恢复时砂：信息已降解为噪音，理论上不可逆</li>
                 <li>无法控制遗歌弦：只能探测和观测</li>
@@ -2340,7 +2409,7 @@
                 <p><strong>核心原理：</strong></p>
                 <ul>
                     <li>歌者的存在信息写入固件区</li>
-                    <li>固件区的信息 H = 1（完美有序）</li>
+                    <li>固件区的信息 $H$ = 1（完美有序）</li>
                     <li>在信息域中，歌者是"极低熵的异常点"</li>
                 </ul>
                 <p><strong>视觉比喻：</strong></p>
@@ -2518,21 +2587,23 @@
             <div class="essence-box">
                 <h4>本质</h4>
                 <p><strong>核心流程：</strong></p>
-                <ol>
-                    <li>流沙清除实体/关系</li>
-                    <li>↓</li>
-                    <li>被清除的信息转化为Fragment（记忆碎片）</li>
-                    <li>↓</li>
-                    <li>Fragment被流沙"裹挟"（像洪流携带泥沙）</li>
-                    <li>↓</li>
-                    <li>歌者进入流沙区域</li>
-                    <li>↓</li>
-                    <li>流沙无差别冲击歌者（像波浪拍打礁石）</li>
-                    <li>↓</li>
-                    <li>歌者的只写区块被"强制写入"Fragment</li>
-                    <li>↓</li>
-                    <li>歌者被迫获得/体验这些记忆</li>
-                </ol>
+                <div class="center-container">
+                    <ol>
+                        <li>流沙清除实体/关系</li>
+                        <div class="arrow">↓</div>
+                        <li>被清除的信息转化为Fragment（记忆碎片）</li>
+                        <div class="arrow">↓</div>
+                        <li>Fragment被流沙"裹挟"（像洪流携带泥沙）</li>
+                        <div class="arrow">↓</div>
+                        <li>歌者进入流沙区域</li>
+                        <div class="arrow">↓</div>
+                        <li>流沙无差别冲击歌者（像波浪拍打礁石）</li>
+                        <div class="arrow">↓</div>
+                        <li>歌者的只写区块被"强制写入"Fragment</li>
+                        <div class="arrow">↓</div>
+                        <li>歌者被迫获得/体验这些记忆</li>
+                    </ol>
+                </div>
                 <p><strong>*无差别冲击的含义：</strong></p>
                 <ul>
                     <li>流沙是信息域的机械过程，没有意识</li>
@@ -2578,9 +2649,9 @@
             <h4>17.4 冲击的强度取决因素</h4>
             <p><strong>因素1：流沙的θ值</strong></p>
             <ul>
-                <li>θ=0.1：零星的碎片（数个到数十个）</li>
-                <li>θ=0.5：洪流的碎片（数千到数万个）</li>
-                <li>θ=1.0：海啸般的碎片（数百万到数十亿个）</li>
+                <li>$θ$ = 0.1：零星的碎片（数个到数十个）</li>
+                <li>$θ$ = 0.5：洪流的碎片（数千到数万个）</li>
+                <li>$θ$ = 1.0：海啸般的碎片（数百万到数十亿个）</li>
             </ul>
             
             <p><strong>因素2：歌者与流沙源点的距离</strong></p>
@@ -2746,7 +2817,7 @@
             <p><strong>表现：</strong></p>
             <ul>
                 <li>歌者的记忆不会被流沙清除</li>
-                <li>即使在θ=1的流沙中，也保持清醒</li>
+                <li>即使在$θ$ = 1的流沙中，也保持清醒</li>
                 <li>看着周围一切消失，自己完好无损</li>
             </ul>
             
@@ -2796,7 +2867,7 @@
                 <p><strong>人格层面的解释：</strong></p>
                 <ul>
                     <li>歌者的性格、经历、天赋决定适应性</li>
-                    <li>战士型人格→适应毅战记忆</li>
+                    <li>战士型人格→适应戮战记忆</li>
                     <li>学者型人格→适应洞悉记忆</li>
                     <li>孤独者→适应归寂记忆</li>
                 </ul>
@@ -2823,59 +2894,66 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>+80 ~ +100</td>
-                        <td>S级适应</td>
-                        <td>99%</td>
-                        <td>×0.5</td>
+                        <td>$[+90, +100]$</td>
+                        <td>S</td>
+                        <td>$[90\%, 100\%]$</td>
+                        <td>×0.3</td>
                         <td>本能般释放，几乎无消耗</td>
                     </tr>
                     <tr>
-                        <td>+50 ~ +79</td>
-                        <td>A级适应</td>
-                        <td>95%</td>
+                        <td>$[+75, +89]$</td>
+                        <td>A</td>
+                        <td>$[75\%, 89\%]$</td>
+                        <td>×0.5</td>
+                        <td>正常释放，较低消耗</td>
+                    </tr>
+                    <tr>
+                        <td>$[+50, +74]$</td>
+                        <td>B</td>
+                        <td>$[60\%, 74\%]$</td>
+                        <td>×0.7</td>
+                        <td>稍微集中注意力，中等消耗</td>
+                    </tr>
+                    <tr>
+                        <td>$[+21, +49]$</td>
+                        <td>C</td>
+                        <td>$[51\%, 59\%]$</td>
+                        <td>×0.9</td>
+                        <td>能力不熟练，较高消耗</td>
+                    </tr>
+                    <tr>
+                        <td>$[-20, +20]$</td>
+                        <td>中性</td>
+                        <td>$50\%$</td>
                         <td>×1.0</td>
-                        <td>正常释放，标准消耗</td>
+                        <td>无加成，标准消耗</td>
                     </tr>
                     <tr>
-                        <td>+20 ~ +49</td>
-                        <td>B级适应</td>
-                        <td>85%</td>
-                        <td>×1.5</td>
-                        <td>需要集中，略高消耗</td>
-                    </tr>
-                    <tr>
-                        <td>0 ~ +19</td>
-                        <td>C级适应</td>
-                        <td>70%</td>
-                        <td>×2.0</td>
-                        <td>需要努力，明显消耗</td>
-                    </tr>
-                    <tr>
-                        <td>-19 ~ 0</td>
-                        <td>D级排斥</td>
-                        <td>50%</td>
+                        <td>$[-50, -21]$</td>
+                        <td>D</td>
+                        <td>$[40\%, 49\%]$</td>
                         <td>×3.0</td>
                         <td>困难，高消耗，不稳定</td>
                     </tr>
                     <tr>
-                        <td>-49 ~ -20</td>
-                        <td>E级排斥</td>
-                        <td>30%</td>
-                        <td>×5.0</td>
-                        <td>极难，极高消耗，可能失败</td>
-                    </tr>
-                    <tr>
-                        <td>-79 ~ -50</td>
-                        <td>F级排斥</td>
-                        <td>10%</td>
-                        <td>×10</td>
+                        <td>$[-75, -51]$</td>
+                        <td>E</td>
+                        <td>$[25\%, 39\%]$</td>
+                        <td>×10.0</td>
                         <td>几乎不可能，可能反噬</td>
                     </tr>
                     <tr>
-                        <td>-100 ~ -80</td>
-                        <td>绝对排斥</td>
-                        <td>&lt;1%</td>
-                        <td>-</td>
+                        <td>$[-90, -76]$</td>
+                        <td>F</td>
+                        <td>$[5\%, 24\%]$</td>
+                        <td>×25.0</td>
+                        <td>只在最极端情况下可能释放，必定产生反噬</td>
+                    </tr>
+                    <tr>
+                        <td>$[-100, -91]$</td>
+                        <td>G</td>
+                        <td>$[0\%, 4\%]$</td>
+                        <td>×100.0</td>
                         <td>实际上无法释放</td>
                     </tr>
                 </tbody>
@@ -2892,7 +2970,7 @@
             
             <h3>20. 六大记忆类型</h3>
             
-            <h4>20.1 毅战（Carnage）</h4>
+            <h4>20.1 戮战（Carnage）</h4>
             <p><strong>来源记忆：</strong></p>
             <ul>
                 <li>战死沙场的士兵</li>
@@ -2953,7 +3031,7 @@
                 <li>噩梦（每晚都在厮杀）</li>
             </ul>
             
-            <h4>20.2 感心（Influence）</h4>
+            <h4>20.2 惑心（Influence）</h4>
             <p><strong>来源记忆：</strong></p>
             <ul>
                 <li>深爱过的恋人</li>
@@ -3256,46 +3334,46 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>毅战</td>
+                        <td>戮战</td>
+                        <td>高</td>
                         <td>中</td>
-                        <td>极高</td>
                         <td>低</td>
-                        <td>快攻型，但单线程</td>
+                        <td>强攻型，但较慢单线程</td>
                     </tr>
                     <tr>
-                        <td>感心</td>
-                        <td>中高</td>
+                        <td>惑心</td>
+                        <td>较高</td>
                         <td>中</td>
-                        <td>中</td>
+                        <td>高</td>
                         <td>感知型，需要分配注意力</td>
                     </tr>
                     <tr>
                         <td>洞悉</td>
                         <td>高</td>
-                        <td>高</td>
                         <td>极高</td>
-                        <td>全能型，但容易过载</td>
+                        <td>高</td>
+                        <td>战略型，能力的攻击性弱</td>
                     </tr>
                     <tr>
                         <td>召墟</td>
-                        <td>中</td>
+                        <td>高</td>
                         <td>低</td>
                         <td>中</td>
                         <td>蓄力型，需要时间构建</td>
                     </tr>
                     <tr>
                         <td>同调</td>
-                        <td>中高</td>
+                        <td>较高</td>
                         <td>中</td>
                         <td>极高</td>
                         <td>协调型，天然多线程</td>
                     </tr>
                     <tr>
                         <td>归寂</td>
-                        <td>低</td>
-                        <td>中</td>
-                        <td>低</td>
-                        <td>精简型，以少胜多</td>
+                        <td>极低</td>
+                        <td>极高</td>
+                        <td>极高</td>
+                        <td>速度型，以少胜多</td>
                     </tr>
                 </tbody>
             </table>
@@ -3372,7 +3450,7 @@
                         <td>5,000+ MU</td>
                         <td>极限容量</td>
                         <td>侵蚀幸存者，传说歌者</td>
-                        <td>战略级威慑，移动的遗歌弦</td>
+                        <td>战略级威慑</td>
                     </tr>
                 </tbody>
             </table>
@@ -3636,7 +3714,7 @@
                 <li>超过极限，系统崩溃</li>
                 <li>失去意识，Fragment失控（随机释放能力）</li>
                 <li>可能无差别攻击周围人，变成"暴走者"</li>
-                <li>结局：被队友制服/杀死、自发归沙、凝结成遗歌弦（罕见）、变成"噪音人形"</li>
+                <li>结局：被队友制服/杀死、自发归沙、变成"噪音人形"</li>
             </ul>
             
             <h4>21.8 精神力测量仪</h4>
@@ -3744,7 +3822,6 @@
                 <li>说话用"我们"而非"我"</li>
                 <li>无法做出个人决定（总是参考Fragment中的其他人）</li>
                 <li>情感反应迟缓（需要查询Fragment才知道该有什么感受）</li>
-                <li>最终成为行走的遗歌弦</li>
             </ul>
             
             <h3>23. 归沙（Return to Sand）</h3>
@@ -3811,19 +3888,9 @@
                 <li>但也可能是：
                     <ul>
                         <li>隐居</li>
-                        <li>疯狂后成为"遗歌弦"（变成遗歌弦？）</li>
                         <li>被某种未知力量带走</li>
                     </ul>
                 </li>
-            </ul>
-            
-            <h4>23.5 归沙与遗歌弦的关系（推测）</h4>
-            <p><strong>可能性：歌者能"成为"遗歌弦</strong></p>
-            <ul>
-                <li>归沙的真相</li>
-                <li>歌者死亡时，意识凝结为遗歌弦</li>
-                <li>从活的灯塔变成永恒的碑</li>
-                <li>这是真正的永生，还是另一种诅咒？</li>
             </ul>
             
             <h3>24. 歌者的社会地位与组织</h3>
@@ -3903,7 +3970,7 @@
                 <li>成员间用"昵称"相称</li>
             </ul>
             
-            <p><strong>「遗忘局」（Bureau of Oblivion）</strong></p>
+            <p><strong>「遗忘署」（Bureau of Oblivion）</strong></p>
             <p><strong>性质：</strong></p>
             <ul>
                 <li>政府/极权组织</li>
@@ -3928,14 +3995,14 @@
             
             <h4>24.4 按类型划分的派系（非正式）</h4>
             <ul>
-                <li><strong>血歌会（毅战）</strong>
+                <li><strong>嗜血盟（戮战）</strong>
                     <ul>
                         <li>雇佣兵、战士组织</li>
                         <li>信奉力量至上</li>
                         <li>可能成为军阀</li>
                     </ul>
                 </li>
-                <li><strong>核心院（感心）</strong>
+                <li><strong>窥心院（惑心）</strong>
                     <ul>
                         <li>情报、外交组织</li>
                         <li>操纵人心</li>
@@ -3949,14 +4016,14 @@
                         <li>可能触及禁忌知识</li>
                     </ul>
                 </li>
-                <li><strong>守墟者（召墟）</strong>
+                <li><strong>守墟团（召墟）</strong>
                     <ul>
                         <li>考古、保护组织</li>
                         <li>守护遗迹</li>
                         <li>与过去对话</li>
                     </ul>
                 </li>
-                <li><strong>共鸣团（同调）</strong>
+                <li><strong>奏鸣团（同调）</strong>
                     <ul>
                         <li>宗教、政治组织</li>
                         <li>发动群众</li>
@@ -4015,7 +4082,7 @@
             <p>（此部分将根据叙事需求补充）</p>
             <p>可能包括：</p>
             <ul>
-                <li>后末日世界的主要聚居地</li>
+                <li>后启示录世界的主要聚居地</li>
                 <li>时砂覆盖区域分布</li>
                 <li>不同国家/势力的政治格局</li>
                 <li>对流沙、记忆科技、歌者的不同态度</li>
@@ -4025,11 +4092,11 @@
             <p>（此部分将根据叙事需求补充）</p>
             <p>可能包括：</p>
             <ul>
-                <li>保守派政权（严格控制Ec）</li>
+                <li>保守派政权（严格控制CI）</li>
                 <li>激进派组织（追求理解流沙）</li>
                 <li>虚无派教团（末日崇拜）</li>
                 <li>重建派（试图恢复黄金时代）</li>
-                <li>歌者组织（回响会、遗忘局、各派系）</li>
+                <li>歌者组织（回响会、遗忘署、各派系）</li>
                 <li>时砂集团</li>
                 <li>记忆商业集团</li>
             </ul>
@@ -4041,8 +4108,8 @@
             <h3>A. 信息域参数</h3>
             <div class="formula-box">
                 <h4>公式</h4>
-                <p><strong>原信息等效体积公式：</strong>V ∝ |ln(H)|</p>
-                <p><strong>修正信息等效体积公式：</strong>V = V₀ · |ln(H)| / H^α</p>
+                <p><strong>原信息等效体积公式：</strong>\( V \propto \left|\ln(H)\right| \)</p>
+                <p><strong>修正信息等效体积公式：</strong>$V = V_0 \cdot \frac{|\ln(H)|}{H^\alpha}$</p>
                 <p><strong>信息域空间分配：</strong></p>
                 <ul>
                     <li>有序记忆区：~90%</li>
@@ -4050,18 +4117,18 @@
                     <li>缓存/缓冲区：~2%</li>
                     <li>系统固件区：~1%</li>
                 </ul>
-                <p><strong>临界熵值 H_c：</strong>10 ~ 15</p>
+                <p><strong>临界熵值 $H_c$：</strong>10 ~ 15</p>
             </div>
             
             <h3>B. 流沙参数</h3>
             <div class="model-box">
                 <h4>模型</h4>
-                <p><strong>遗忘率θ分级：</strong></p>
+                <p><strong>遗忘率$θ$分级：</strong></p>
                 <ul>
-                    <li>θ∈[0, 0.15]：轻度流沙</li>
-                    <li>θ∈[0.15, 0.60]：中度流沙</li>
-                    <li>θ∈[0.60, 1]：重度流沙</li>
-                    <li>θ=1：侵蚀级别（基准）</li>
+                    <li>$\theta \in [0, 0.15]$：轻度</li>
+                    <li>$\theta \in [0.15, 0.60]$：中度</li>
+                    <li>$\theta \in [0.60, 1]$：重度</li>
+                    <li>$\theta = 1$：侵蚀（基准）</li>
                 </ul>
                 <p><strong>流沙扩散速度：</strong></p>
                 <ul>
@@ -4099,8 +4166,6 @@
                 <p><strong>适应性数值：</strong></p>
                 <ul>
                     <li>范围：-100 ~ +100</li>
-                    <li>S级适应：+80 ~ +100</li>
-                    <li>绝对排斥：-100 ~ -80</li>
                 </ul>
             </div>
             
@@ -4145,12 +4210,12 @@
                 <ul>
                     <li>原料：深灰时砂</li>
                     <li>制造成功率：~10%</li>
-                    <li>抗遗忘能力：可抵御θ=0.4的流沙</li>
+                    <li>抗遗忘能力：可抵御$θ$ = 0.4的流沙</li>
                 </ul>
                 <p><strong>时砂屏蔽效果：</strong></p>
                 <ul>
-                    <li>时砂墙：可抵御θ=0.3的流沙</li>
-                    <li>个人护符：可抵御θ=0.15的流沙</li>
+                    <li>时砂墙：可抵御$θ$ = 0.3的流沙</li>
+                    <li>个人护符：可抵御$θ$ = 0.15的流沙</li>
                 </ul>
             </div>
             
@@ -4186,38 +4251,40 @@
             <div class="term-def">
                 <p><strong>ErodeEcho / 流沙遗歌：</strong>世界观名称</p>
                 <p><strong>信息域（Information Domain）：</strong>信息存在的抽象空间</p>
-                <p><strong>信息熵值（H）：</strong>衡量信息有序度的参数，H越低越有序</p>
-                <p><strong>等效体积（V）：</strong>信息在信息域中占用的"空间"，V ∝ ln(|H|)，修正公式 V = V₀ · |ln(H)| / H^α</p>
-                <p><strong>λ (Lambda)：</strong>区域信息等效体积</p>
-                <p><strong>λm (Lambda-m)：</strong>区域信息等效体积的动态上限</p>
+                <p><strong>信息熵值（$H$）：</strong>衡量信息有序度的参数，$H$越低越有序</p>
+                <p><strong>等效体积（$V$）：</strong>信息在信息域中占用的"空间"，\( V \propto \left|\ln(H)\right| \)，修正公式 $V = V_0 \cdot \frac{|\ln(H)|}{H^\alpha}$</p>
+                <p><strong>$λ$ (Lambda)：</strong>区域信息等效体积</p>
+                <p><strong>$λ_m$ (Lambda-m)：</strong>区域信息等效体积的动态上限</p>
                 <p><strong>流沙（The Sand / Erosion）：</strong>信息域的容量管理机制，清理程序</p>
                 <p><strong>遗忘（Forgetting）：</strong>被流沙作用的状态，特征信息被清除</p>
                 <p><strong>时砂（Chronosand）：</strong>实体被流沙降解后的产物，噪音的物质表达</p>
-                <p><strong>遗忘率（θ / Theta）：</strong>量化流沙强度的参数，范围0~1</p>
-                <p><strong>侵蚀（The Erosion）：</strong>θ=1的基准事件，前文明的终结</p>
-                <p><strong>文明指数（Ec）：</strong>人类用于衡量文明发达程度的指标</p>
+                <p><strong>遗忘率（$θ$ / Theta）：</strong>量化流沙强度的参数，范围0~1</p>
+                <p><strong>侵蚀（The Erosion）：</strong>$θ = 1$的基准事件，前文明的终结</p>
+                <p><strong>文明指数（CI, Civilization Index）：</strong>人类用于衡量文明发达程度的指标</p>
             </div>
             
             <h3>无序记忆区清理机制</h3>
             <div class="term-def">
-                <p><strong>信息等效体积修正公式：</strong>V = V₀ · |ln(H)| / H^α，修正了原公式在H→∞时V→∞的问题</p>
-                <p><strong>临界熵值（Critical Entropy Threshold）H_c：</strong>当信息的熵值 H 超过临界阈值 H_c (≈10~15) 时，信息结构因过于脆弱而无法维持稳定状态</p>
-                <p><strong>信息退化过程：</strong>无序信息从轻度无序(H=1~5)→重度无序(H=5~10)→临界退化(H=10~15)→背景辐射(H>15)的演化过程</p>
-                <p><strong>背景辐射（Background Radiation）：</strong>信息熵值极高(H>15)的信息残留，均匀分布在信息域中，不携带任何有意义的信息内容</p>
+                <p><strong>信息等效体积修正公式：</strong>$V = V_0 \cdot \frac{|\ln(H)|}{H^\alpha}$，修正了原公式在$H \to \infty$时$V \to \infty$的问题
+
+</p>
+                <p><strong>临界熵值（Critical Entropy Threshold）$H_c$：</strong>当信息的熵值 $H$ 超过临界阈值 $H_c$(≈10 ~ 15)时，信息结构因过于脆弱而无法维持稳定状态</p>
+                <p><strong>信息退化过程：</strong>无序信息从轻度无序($H$ = 1~5) → 重度无序($H$ = 5~10) → 临界退化($H$ = 10~15) → 背景辐射($H$ > 15)的演化过程</p>
+                <p><strong>背景辐射（Background Radiation）：</strong>信息熵值极高($H$ > 15)的信息残留，均匀分布在信息域中，不携带任何有意义的信息内容</p>
                 <p><strong>基态噪音（Ground-State Noise）：</strong>背景辐射的别称，信息域的"底色"</p>
                 <p><strong>自然消散机制：</strong>背景辐射在宏观时间尺度上自然"蒸发"的过程</p>
                 <p><strong>无序记忆区动态平衡：</strong>无序信息产生、退化、消散的动态平衡系统</p>
-                <p><strong>退化速率方程：</strong>dH/dt = k(H - H_c)²，描述信息退化速度的数学模型</p>
-                <p><strong>背景辐射消散方程：</strong>ρ(t) = ρ₀ · e^(-t/τ)，描述背景辐射密度随时间衰减的数学模型</p>
+                <p><strong>退化速率方程：</strong>$\frac{dH}{dt} = k(H - H_c)^2$，描述信息退化速度的数学模型</p>
+                <p><strong>背景辐射消散方程：</strong>$\rho_t = \rho_0 \cdot e^{-t/\tau}$，描述背景辐射密度随时间衰减的数学模型</p>
                 <p><strong>辐射风暴（Radiation Storm）：</strong>大规模流沙后无序信息集中退化形成的能量波动事件</p>
                 <p><strong>辐射考古学（Radiation Archaeology）：</strong>通过研究背景辐射密度推测古代文明位置和规模的学科</p>
             </div>
             
             <h3>信息弦及相关</h3>
             <div class="term-def">
-                <p><strong>信息弦（Information String）：</strong>H=1或H≈1的极稳定信息结构</p>
-                <p><strong>宇宙基石弦（Universal Fundamental String）：</strong>H=1，宇宙基本法则</p>
-                <p><strong>文明遗歌弦（Civilization Echo String）：</strong>H≈1，文明的终极信息结晶</p>
+                <p><strong>信息弦（Information String）：</strong>$H$ = 1或$H$ ≈ 1的极稳定信息结构</p>
+                <p><strong>宇宙基石弦（Universal Fundamental String）：</strong>$H$ = 1，宇宙基本法则</p>
+                <p><strong>文明遗歌弦（Civilization Echo String）：</strong>$H$ ≈ 1，文明的终极信息结晶</p>
                 <p><strong>信息张量（Information Tensor）：</strong>衡量信息弦受熵增拉扯的程度</p>
                 <p><strong>弦共振（Resonance Event）：</strong>多个遗歌弦频率干涉产生的现象</p>
                 <p><strong>时间泡（Chrono Bubble）：</strong>弦共振产生的局部时间异常区域</p>
@@ -4279,10 +4346,10 @@
             
             <h3>六大记忆类型</h3>
             <div class="term-def">
-                <p><strong>毅战（Carnage）：</strong>来自战士、军事家、猎人等与"冲突"相关的记忆</p>
-                <p><strong>战争显现（Carnage Manifestation）：</strong>毅战类型的终极能力</p>
-                <p><strong>感心（Influence）：</strong>来自情感强烈或复杂的个体记忆</p>
-                <p><strong>心灵共鸣（Emotional Resonance）：</strong>感心类型的终极能力</p>
+                <p><strong>戮战（Carnage）：</strong>来自战士、军事家、猎人等与"冲突"相关的记忆</p>
+                <p><strong>战争显现（Carnage Manifestation）：</strong>戮战类型的终极能力</p>
+                <p><strong>惑心（Influence）：</strong>来自情感强烈或复杂的个体记忆</p>
+                <p><strong>心灵共鸣（Emotional Resonance）：</strong>惑心类型的终极能力</p>
                 <p><strong>洞悉（Logic）：</strong>来自科学家、学者、战略家等依赖于逻辑与知识的记忆</p>
                 <p><strong>真理显现（Truth Manifestation）：</strong>洞悉类型的终极能力</p>
                 <p><strong>召墟（Locus）：</strong>来自特定地点或建筑被侵蚀后的残留记忆</p>
@@ -4297,7 +4364,7 @@
             <div class="term-def">
                 <p><strong>黄金时代：</strong>侵蚀前的前文明时期</p>
                 <p><strong>前文明纪元：</strong>侵蚀之前的时代</p>
-                <p><strong>现文明纪元 / 后末日时代：</strong>侵蚀之后的时代</p>
+                <p><strong>现文明纪元 / 后启示录时代：</strong>侵蚀之后的时代</p>
                 <p><strong>文明恐惧症（Civilization Phobia）：</strong>害怕文明发展过快的集体心理</p>
                 <p><strong>记忆贵族：</strong>拥有大量记忆晶体的上层阶级</p>
                 <p><strong>遗忘者：</strong>被流沙严重影响的底层群体</p>
@@ -4330,11 +4397,11 @@
                 <p><strong>存在信息（Existential Information）：</strong>定义实体本身的信息</p>
                 <p><strong>属性信息（Attribute Information）：</strong>描述实体特征的信息</p>
                 <p><strong>信息冗余度（Information Redundancy）：</strong>信息被多少主体记忆的程度</p>
-                <p><strong>信息辐射（Information Radiation）：</strong>遗歌弦或歌者产生的信息场</p>
+                <p><strong>信息辐射（Information Radiation）：</strong>信息所激发产生的信息场</p>
                 <p><strong>信息噪音（Information Noise）：</strong>高熵的混乱信息</p>
                 <p><strong>信息层（Information Layer）：</strong>与物理层相对的信息域层面</p>
                 <p><strong>熵增趋势（Entropy Increase Tendency）：</strong>信息向混乱演化的宇宙底层倾向</p>
-                <p><strong>反熵（Anti-Entropy）：</strong>对抗熵增的过程，如创造有序信息</p>
+                <p><strong>逆熵（Anti-Entropy）：</strong>对抗熵增的过程，如创造有序信息</p>
                 <p><strong>终末冲击（Terminal Impact）：</strong>流沙的最后阶段，信息-物质界限打破</p>
                 <p><strong>伪造歌弦（Pseudo-String）：</strong>时砂共振自发产生的类似遗歌弦的结构</p>
                 <p><strong>时砂结晶（Sand Crystal）：</strong>时砂在特定条件下凝结的块状物</p>
@@ -4366,7 +4433,7 @@
                 <p><strong>时空错位（Spatiotemporal Dislocation）：</strong>感受到Fragment的时空与当下不符</p>
                 <p><strong>因果断裂（Causal Disruption）：</strong>因果链被遗忘或Fragment干扰</p>
                 <p><strong>存在稀薄（Existential Thinning）：</strong>存在感降低的状态</p>
-                <p><strong>活体时砂（Living Sand）：</strong>精神崩溃后变成的状态</p>
+                <p><strong>活体时砂（Living Sand）：</strong>歌者精神崩溃后变成的状态</p>
             </div>
         </div>
         
@@ -4390,7 +4457,7 @@
                 </ul>
                 <p><strong>永恒的代价：</strong></p>
                 <ul>
-                    <li>遗歌弦达到永恒（H=1），但只是冰冷的信息</li>
+                    <li>遗歌弦达到永恒（$H$ = 1），但只是冰冷的信息</li>
                     <li>歌者获得"不朽"（免疫遗忘），但痛苦永恒</li>
                     <li>真正的永恒，是否等同于失去人性？</li>
                 </ul>
@@ -4679,7 +4746,7 @@
             </a>
             <a href="#part3" class="nav-item" data-section="part3">
                 <span class="nav-line"></span>
-                <span class="nav-label">后末日文明</span>
+                <span class="nav-label">后启示录文明</span>
             </a>
             <a href="#part4" class="nav-item" data-section="part4">
                 <span class="nav-line"></span>
